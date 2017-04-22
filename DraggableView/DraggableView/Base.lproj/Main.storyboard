@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OxH-wR-quv">
+                                <rect key="frame" x="83" y="208" width="225" height="266"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnO-yF-WEX">
+                                <rect key="frame" x="76" y="534" width="69" height="30"/>
+                                <state key="normal" title="SwipeLeft"/>
+                                <connections>
+                                    <action selector="swipeLeftBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BEH-ZV-zg9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2O-ZR-bHl">
+                                <rect key="frame" x="241" y="534" width="78" height="30"/>
+                                <state key="normal" title="SwipeRight"/>
+                                <connections>
+                                    <action selector="swipeRightBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FeC-9p-hLX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xnO-yF-WEX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="C2k-dm-M4J"/>
+                            <constraint firstItem="OxH-wR-quv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="7" id="QRM-Se-c9H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j2O-ZR-bHl" secondAttribute="trailing" constant="40" id="hy5-dz-G10"/>
+                            <constraint firstItem="xnO-yF-WEX" firstAttribute="baseline" secondItem="j2O-ZR-bHl" secondAttribute="baseline" id="jqP-kj-YGB"/>
+                            <constraint firstItem="OxH-wR-quv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="7.5" id="lc8-ZP-8jo"/>
+                            <constraint firstItem="OxH-wR-quv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="mcc-d1-BiF"/>
+                            <constraint firstItem="j2O-ZR-bHl" firstAttribute="top" secondItem="OxH-wR-quv" secondAttribute="bottom" constant="60" id="sVZ-od-Zp2"/>
+                            <constraint firstItem="OxH-wR-quv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="tL4-x5-9c3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="draggableView" destination="OxH-wR-quv" id="0lz-eA-qHs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
